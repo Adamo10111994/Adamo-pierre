@@ -1,0 +1,83 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyN7ChjO/DzD79uIV4fVHSzR",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Adamo10111994/Adamo-pierre/blob/main/Untitled7.ipynb%20TRABALHO_PARTE%202\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "KkQIYoIYFBAI"
+      },
+      "outputs": [],
+      "source": [
+        "\n",
+        "gabarito = ''\n",
+        "gabarito2 = ''\n",
+        "count = total_acertos = total = count2 = maior = menor = 0\n",
+        "\n",
+        "for e in range(1,11):\n",
+        "    gabarito = input(f\"{e} - Digite o gabarito das notas: \").strip().upper()[0]\n",
+        "    gabarito2 += (gabarito)\n",
+        "\n",
+        "print(\"-=\"*30)\n",
+        "continuar = ' '\n",
+        "while continuar not in 'N':\n",
+        "\n",
+        "\n",
+        "\n",
+        "    for c in range(1,11):\n",
+        "        resposta = input(f\"{c} - Resposta da questao: \").strip().upper()[0]\n",
+        "        if (c == 1 and resposta == gabarito2[0]) or (c == 2 and resposta == gabarito2[1]) or (c == 3 and resposta == gabarito2[2]) or (c == 4 and resposta == gabarito2[3]) or (c == 5 and resposta == gabarito2[4]) or (c == 6 and resposta == gabarito2[5]) or (c == 7 and resposta == gabarito2[6]) or (c == 8 and resposta == gabarito2[7]) or (c == 9 and resposta == gabarito2[8]) or (c == 10 and resposta == gabarito2[9]):\n",
+        "            count += 1\n",
+        "            total_acertos += 1\n",
+        "\n",
+        "        if c == 10:\n",
+        "            print(\"-=\"*30)\n",
+        "            continuar = input(\"Quer continuar [N] para sair \").strip().upper()[0]\n",
+        "            total+=1\n",
+        "\n",
+        "        if total_acertos > maior:\n",
+        "            maior = total_acertos\n",
+        "        if total_acertos < menor or total_acertos == 1:\n",
+        "            menor = total_acertos\n",
+        "\n",
+        "print(\"-=\"*30)\n",
+        "print(\"Gabarito das respostas\")\n",
+        "for d in gabarito2:\n",
+        "    count2+=1\n",
+        "    print(f\"{count2} - {d}\")\n",
+        "print(\"-=\"*30)\n",
+        "\n",
+        "print(f\"Total de acertos: {count}\")\n",
+        "print(f\"Pontos recebidos: {count}\")\n",
+        "print(f\"Maior acerto {maior}\")\n",
+        "print(f\"Menor acerto: {menor}\")\n",
+        "print(f\"Total de alunos a utilizar o sistema: {total}\")"
+      ]
+    }
+  ]
+}
